@@ -1,5 +1,5 @@
 import pytest
-from __init__ import compute_bmi
+from . import compute_bmi
 
 
 @pytest.mark.parametrize('weight, height, expected', (
