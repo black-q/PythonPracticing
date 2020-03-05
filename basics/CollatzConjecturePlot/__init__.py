@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
 def collatz(number):
     """
     Collatz conjecture
@@ -22,8 +25,22 @@ def collatz(number):
     return collatz_lst
 
 
+def collatz_plot(lst, number):
+    step = range(len(lst))
+    plt.plot(step, lst, linestyle='-', marker='.', color='b')
+    plt.grid(True)
+    plt.xlabel("Step")
+    plt.ylabel("Number")
+    plt.title(f"Collatz conjecture for: {number}")
+    plt.savefig("collatz.png", dpi=72)
+    plt.show()
+
+
 def main():
-    print(collatz(11))
+    user_number = int(input("Please, provide number: "))
+    result_lst = collatz(user_number)
+    print(f'Collatz sequence for {user_number} is: {result_lst}')
+    collatz_plot(result_lst, user_number)
 
 
 if __name__ == '__main__':
