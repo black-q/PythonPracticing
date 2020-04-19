@@ -1,3 +1,8 @@
+"""
+BMI Calculator
+"""
+
+
 def compute_bmi(weight, height):
     """
     Calculate BMI and return category
