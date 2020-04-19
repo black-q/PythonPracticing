@@ -18,7 +18,7 @@ def compute_bmi(weight, height):
 
 def main():
     user_weight = float(input("Your weight [kg]: "))
-    user_height = float(input("Your weight [m]: "))
+    user_height = float(input("Your height [m]: "))
     user_result = compute_bmi(user_weight, user_height)
 
     print(f'You are {user_result}')
