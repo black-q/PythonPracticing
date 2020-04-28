@@ -1,4 +1,11 @@
 def is_ones(n_ones, ones_list):
+    """
+    Return True if in ones_list is n_ones next to each other and False if doesn't
+    :param n_ones:
+    :param ones_list:
+    :return: Bool
+    """
+
     gen = (sum(ones_list[i:i+n_ones]) for i in range(len(ones_list)))
 
     for element in gen:

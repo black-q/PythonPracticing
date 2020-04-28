@@ -1,4 +1,11 @@
 def is_ones(n_ones, ones_list):
+    """
+    Return True if in ones_list is n_ones next to each other and False if doesn't
+    :param n_ones:
+    :param ones_list:
+    :return: Bool
+    """
+
     count = 0
     for element in ones_list:
         if element == 1:
